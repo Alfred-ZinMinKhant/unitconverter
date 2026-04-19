@@ -9,10 +9,9 @@ import androidx.compose.ui.viewinterop.AndroidView
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
+import com.sideproject.unitconverter.BuildConfig
 import com.sideproject.unitconverter.ui.screens.*
 import com.sideproject.unitconverter.ui.theme.LocalInstrumentColors
-
-private const val BANNER_AD_UNIT_ID = "ca-app-pub-9922040295495075/9550568487"
 
 @Composable
 fun UnitConverterApp() {
@@ -60,7 +59,7 @@ fun UnitConverterApp() {
             factory = { context ->
                 AdView(context).apply {
                     setAdSize(AdSize.BANNER)
-                    adUnitId = BANNER_AD_UNIT_ID
+                    adUnitId = BuildConfig.BANNER_AD_UNIT_ID
                     loadAd(AdRequest.Builder().build())
                 }
             },

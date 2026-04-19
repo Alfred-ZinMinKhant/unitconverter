@@ -17,10 +17,14 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "BANNER_AD_UNIT_ID", "\"ca-app-pub-3940256099942544/6300978111\"")
+        }
         release {
             isMinifyEnabled   = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            buildConfigField("String", "BANNER_AD_UNIT_ID", "\"ca-app-pub-9922040295495075/9550568487\"")
         }
     }
 
@@ -33,6 +37,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
