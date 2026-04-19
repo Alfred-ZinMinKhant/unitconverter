@@ -158,7 +158,6 @@ fun InstrumentTopBar(
                 Text(subtitle, style = MaterialTheme.typography.labelSmall, color = colors.ink50)
             }
         }
-        StatusPill("LIVE")
     }
 }
 
@@ -551,11 +550,8 @@ fun InstrumentTabs(
                 modifier = Modifier
                     .weight(1f)
                     .clickable { onSelect(index) }
-                    .then(
-                        if (isActive)
-                            Modifier.background(colors.bgPanel)
-                        else
-                            Modifier
+                    .background(
+                        if (isActive) colors.accentSoft else Color.Transparent
                     )
                     .then(
                         if (index < tabs.lastIndex)
@@ -569,22 +565,11 @@ fun InstrumentTabs(
                     .padding(vertical = 11.dp),
                 contentAlignment = Alignment.Center,
             ) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(
-                        tab,
-                        style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold),
-                        color = if (isActive) colors.ink100 else colors.ink50,
-                    )
-                }
-                if (isActive) {
-                    Box(
-                        modifier = Modifier
-                            .align(Alignment.BottomCenter)
-                            .fillMaxWidth()
-                            .height(2.dp)
-                            .background(colors.accent)
-                    )
-                }
+                Text(
+                    tab,
+                    style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold),
+                    color = if (isActive) colors.accent else colors.ink50,
+                )
             }
         }
     }

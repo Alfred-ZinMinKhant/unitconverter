@@ -65,7 +65,6 @@ fun HomeScreen(onOpen: (String) -> Unit) {
                     Text("CONVERTER", style = MaterialTheme.typography.titleLarge, color = colors.ink100)
                     Text("v2.4", style = MaterialTheme.typography.labelSmall, color = colors.ink50)
                 }
-                StatusPill("READY")
             }
 
             Spacer(Modifier.height(22.dp))
