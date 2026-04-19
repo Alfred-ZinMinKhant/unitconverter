@@ -24,6 +24,8 @@ fun UnitConverterApp() {
         modifier = Modifier
             .fillMaxSize()
             .background(colors.bgPage)
+            .statusBarsPadding()
+            .navigationBarsPadding()
     ) {
         Box(modifier = Modifier.weight(1f)) {
             AnimatedContent(
