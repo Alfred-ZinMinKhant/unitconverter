@@ -1,4 +1,0 @@
-#Mon Apr 13 11:23:56 ICT 2026
-base.0=/Users/zinminkhant/Desktop/Side Project/unit-converter/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
